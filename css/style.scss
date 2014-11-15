@@ -1,49 +1,51 @@
-a {
-    display: block;
-}
-ul {
-    display: block;
-    padding: 0;
-    margin: auto 0;
-}
-li {
-    display: block;
-    float: left;
-    padding: 0px;
-}
 .left {
     float: left;
 }
 .right {
     float: right;
 }
+.clear {
+    clear: both;
+}
 .homepage {
-    display: block;
     background-color: #666666;
-    background-attachment: fixed;
+    display: block;
     margin: 0;
     position: relative;
 
 }
 .page_wrapper {
     background-color: #dddddd;
-    width: 80%;
-    max-width: 1160px;
+    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1160px;
     margin: 0 auto;
+    width: 80%;
 }
 .header {
     background-color: #222222;
     color: #ffffff;
-    width: 100%;
     vertical-align: middle;
+    width: 100%;
 
     .topbar {
         height: 18px;
         margin: 0 50px;
         padding: 11px 0;
+
+        #contacts {
+            float: left;
+            overflow: hidden;
+
+            .contact {
+                float:left
+            }
+        }
+
+        #language_selection {
+            float: right;
+        }
 
         a, a:visited {
             color: #ffffff;
@@ -57,9 +59,9 @@ li {
             }
 
             .menu_dropdown {
-                top: 10px;
-                display: block;
                 background-color: #000000;
+                display: block;
+                top: 10px;
                 vertical-align: middle;
 
                 .menu_item {
@@ -77,13 +79,15 @@ li {
     .navigation_bar {
         background-color: #ffffff;
         color: #000000;
-        height: 120px;
         font: 18px serif;
+        overflow: hidden;
+        width: 100%;
 
         .logo {
-            margin-left: 80px;
-            height: 100%;
-            font-size: 100%;
+            float: left;
+            font-size: 36px;
+            height: 80px;
+            line-height: 80px;
 
             a {
                 margin: auto 0;
@@ -91,23 +95,26 @@ li {
         }
 
         .navigations {
-            height: 120px;
-            margin-right: 80px;
+            float: right;
+            overflow: hidden;
 
             .navigation {
-                border-right: solid 1px #dddddd;
-                padding: 0 20px;
+                float: left;
 
                 a {
                     color: #111111;
+                    height: 80px;
+                    line-height: 80px;
+                    margin: 0 20px;
                     text-decoration: none;
-                    height: 17px;
-                    margin: 50px 0;
+                }
+
+                a:hover {
+                    color: #111188;
                 }
             }
 
             .navigation:hover {
-                border-bottom: solid 3px #444444;
             }
         }
     }
