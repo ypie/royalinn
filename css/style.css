@@ -83,11 +83,12 @@
 
 .photos {
   background-color: #dddddd;
-  height: 400px; }
+  width: 1160px;
+  height: 580px; }
   .photos .slides {
     position: absolute;
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     margin: auto;
     top: 0;
@@ -100,19 +101,20 @@
       background-color: Navy;
       font-size: 16px;
       font-weight: bold;
-      line-height: 400px;
       text-align: center;
       color: White; }
       .photos .slides .slide img {
-        width: 800px;
-        height: 400px; }
+        width: 100%;
+        height: 100%; }
       .photos .slides .slide .slide_caption {
         position: absolute;
         margin: auto;
         top: 0;
         left: 0;
         bottom: 0;
-        right: 0; }
+        right: 0;
+        height: 30px;
+        font-size: 30px; }
   .photos .bullet_navigator {
     position: absolute;
     margin: auto;
@@ -151,10 +153,10 @@
     bottom: 0;
     top: 0; }
     .photos .arrow.left {
-      left: 150px;
+      left: 20px;
       background-position: -3px -33px; }
     .photos .arrow.right {
-      right: 150px;
+      right: 20px;
       background-position: -63px -33px; }
     .photos .arrow.left:hover {
       background-position: -123px -33px; }
@@ -167,7 +169,20 @@
 
 .content_wrapper {
   background-color: #ffffff;
-  height: 600px; }
+  min-height: 600px;
+  overflow: hidden;
+  padding: 40px 40px 0 40px; }
+  .content_wrapper .content {
+    float: left;
+    width: 31.3%;
+    margin: 0 3% 30px 0; }
+    .content_wrapper .content.last {
+      margin: 0; }
+    .content_wrapper .content h {
+      display: block;
+      border-bottom: #e8e8e8 1px solid;
+      padding: 0 0 12px 0;
+      margin: 0 0 30px 0; }
 
 .footer {
   background-color: #000000;
