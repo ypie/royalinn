@@ -84,6 +84,72 @@
 .photos {
   background-color: #dddddd;
   height: 400px; }
+  .photos .slides {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    overflow: hidden; }
+    .photos .slides .slide {
+      position: absolute;
+      overflow: hidden;
+      background-color: Navy;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 400px;
+      text-align: center;
+      color: White; }
+  .photos .bullet_navigator {
+    position: absolute;
+    bottom: 4px;
+    left: 6px; }
+    .photos .bullet_navigator div, .photos .bullet_navigator div:hover, .photos .bullet_navigator .av {
+      background: url(../img/b03.png) no-repeat;
+      overflow: hidden;
+      cursor: pointer; }
+    .photos .bullet_navigator div {
+      background-position: -5px -4px; }
+    .photos .bullet_navigator div:hover, .photos .bullet_navigator .bullet_navigator .av:hover {
+      background-position: -35px -4px; }
+    .photos .bullet_navigator .av {
+      background-position: -65px -4px; }
+    .photos .bullet_navigator .dn, .photos .bullet_navigator .dn:hover {
+      background-position: -95px -4px; }
+    .photos .bullet_navigator .bullet {
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      text-align: center;
+      line-height: 21px;
+      color: white;
+      font-size: 12px; }
+  .photos .arrowleft, .photos .arrowright {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../img/a03.png) no-repeat;
+    overflow: hidden; }
+  .photos .arrowleft {
+    width: 55px;
+    height: 55px;
+    bottom: 10px;
+    right: 150px;
+    background-color: green;
+    background-position: -3px -33px; }
+  .photos .arrowright {
+    width: 55px;
+    height: 55px;
+    bottom: 10px;
+    right: 50px;
+    background-color: green;
+    background-position: -63px -33px; }
+  .photos .arrowleft:hover {
+    background-position: -123px -33px; }
+  .photos .arrowright:hover {
+    background-position: -183px -33px; }
+  .photos .arrowleft .dn {
+    background-position: -243px -33px; }
+  .photos .arrowright .dn {
+    background-position: -303px -33px; }
 
 .content_wrapper {
   background-color: #ffffff;

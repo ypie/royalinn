@@ -122,6 +122,80 @@
 .photos {
     background-color: #dddddd;
     height: 400px;
+
+    .slides {
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+
+        .slide {
+            position: absolute;
+            overflow: hidden;
+            background-color: Navy;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 400px;
+            text-align: center;
+            color: White;
+        }
+    }
+
+    .bullet_navigator {
+        position: absolute;
+        bottom: 4px;
+        left: 6px;
+
+        div, div:hover, .av {
+            background: url(../img/b03.png) no-repeat;
+            overflow:hidden;
+            cursor: pointer;
+        }
+
+        div { background-position: -5px -4px; }
+        div:hover, .bullet_navigator .av:hover { background-position: -35px -4px; }
+        .av { background-position: -65px -4px; }
+        .dn, .dn:hover { background-position: -95px -4px; }
+
+        .bullet {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            text-align: center;
+            line-height: 21px;
+            color: white;
+            font-size: 12px;
+        }
+    }
+
+    .arrowleft, .arrowright
+    {
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        background: url(../img/a03.png) no-repeat;
+        overflow:hidden;
+    }
+    .arrowleft {
+        width: 55px;
+        height: 55px;
+        bottom: 10px;
+        right: 150px;
+        background-color: green;
+        background-position: -3px -33px;
+    }
+    .arrowright {
+        width: 55px;
+        height: 55px;
+        bottom: 10px;
+        right: 50px;
+        background-color: green;
+        background-position: -63px -33px;
+    }
+    .arrowleft:hover { background-position: -123px -33px; }
+    .arrowright:hover { background-position: -183px -33px; }
+    .arrowleft .dn { background-position: -243px -33px; }
+    .arrowright .dn { background-position: -303px -33px; }
 }
 .content_wrapper {
     background-color: #ffffff;

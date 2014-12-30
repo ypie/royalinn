@@ -3,6 +3,31 @@
     <title>Royal Inn</title>
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (40KB) instead for release -->
+    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,
+                $AutoPlayInterval: 4000,
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,              //[Required] Class to create arrow navigator instance
+                    $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("photo_container", options);
+        });
+    </script>
 </head>
 <body class="homepage">
     <div class="page_wrapper">
@@ -37,14 +62,54 @@
                 </ul>
             </div>
         </div>
-        <div class="photos">
-            <div class="photo">
+        <div class="photos" style="position: relative;" id="photo_container" class=slider1 title="Outer Container" style="position: relative; width: 800px; height: 400px; background-color: Gray;">
+            <!-- Loading Screen -->
+            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+            </div>
+            <!-- Slides Container -->
+            <div u="slides" title="Slides Container" class="slides">
+                <!-- Slide -->
+                <div class="slide">
+                    <img src="img/landscape/01.jpg" />
+                    Animation plays in "Slides Container"
+                </div>
+                <!-- Slide -->
+                <div class="slide">
+                    <img src="img/landscape/02.jpg" />
+                    Animation plays in "Slides Container"
+                </div>
+                <!-- Slide -->
+                <div class="slide">
+                    <img src="img/landscape/03.jpg" />
+                    Animation plays in "Slides Container"
+                </div>
+                <!-- Slide -->
+                <div class="slide">
+                    <img src="img/landscape/04.jpg" />
+                    Animation plays in "Slides Container"
+                </div>
+            </div>
+            
+            <!-- bullet navigator container -->
+            <div u="navigator" class="bullet_navigator" title="This is navigator" style="position: absolute; bottom: 4px; left: 6px;">
+                <!-- bullet navigator item prototype -->
+                <div u="prototype" class="bullet "><div u="numbertemplate"></div></div>
+            </div>
 
-            </div>
-            <div class="photo">
-            </div>
-            <div class="photo">
-            </div>
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="arrowleft " title="This is arrowleft">
+            </span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="arrowright " title="This is arrow right">
+            </span>
+            
+            <a style="display: none" href="http://www.jssor.com">bootstrap slider</a>
         </div>
         <div class="content_wrapper">
 
