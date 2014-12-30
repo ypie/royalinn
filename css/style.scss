@@ -125,9 +125,14 @@
 
     .slides {
         position: absolute;
-        width: 600px;
+        width: 800px;
         height: 400px;
         overflow: hidden;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
 
         .slide {
             position: absolute;
@@ -138,13 +143,29 @@
             line-height: 400px;
             text-align: center;
             color: White;
+
+            img {
+                width: 800px;
+                height: 400px;
+            }
+
+            .slide_caption {
+                position:absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
         }
     }
 
     .bullet_navigator {
         position: absolute;
+        margin: auto;
         bottom: 4px;
-        left: 6px;
+        left: 0;
+        right: 0;
 
         div, div:hover, .av {
             background: url(../img/b03.png) no-repeat;
@@ -168,34 +189,31 @@
         }
     }
 
-    .arrowleft, .arrowright
-    {
+    .arrow {
         position: absolute;
         cursor: pointer;
         display: block;
         background: url(../img/a03.png) no-repeat;
         overflow:hidden;
-    }
-    .arrowleft {
+        margin: auto;
         width: 55px;
         height: 55px;
-        bottom: 10px;
-        right: 150px;
-        background-color: green;
-        background-position: -3px -33px;
+        bottom: 0;
+        top: 0;
+        
+        &.left {
+            left: 150px;
+            background-position: -3px -33px;
+        }
+        &.right {
+            right: 150px;
+            background-position: -63px -33px;
+        }
+        &.left:hover { background-position: -123px -33px; }
+        &.right:hover { background-position: -183px -33px; }
+        &.left.dn { background-position: -243px -33px; }
+        &.right.dn { background-position: -303px -33px; }
     }
-    .arrowright {
-        width: 55px;
-        height: 55px;
-        bottom: 10px;
-        right: 50px;
-        background-color: green;
-        background-position: -63px -33px;
-    }
-    .arrowleft:hover { background-position: -123px -33px; }
-    .arrowright:hover { background-position: -183px -33px; }
-    .arrowleft .dn { background-position: -243px -33px; }
-    .arrowright .dn { background-position: -303px -33px; }
 }
 .content_wrapper {
     background-color: #ffffff;

@@ -86,9 +86,14 @@
   height: 400px; }
   .photos .slides {
     position: absolute;
-    width: 600px;
+    width: 800px;
     height: 400px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
     .photos .slides .slide {
       position: absolute;
       overflow: hidden;
@@ -98,10 +103,22 @@
       line-height: 400px;
       text-align: center;
       color: White; }
+      .photos .slides .slide img {
+        width: 800px;
+        height: 400px; }
+      .photos .slides .slide .slide_caption {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0; }
   .photos .bullet_navigator {
     position: absolute;
+    margin: auto;
     bottom: 4px;
-    left: 6px; }
+    left: 0;
+    right: 0; }
     .photos .bullet_navigator div, .photos .bullet_navigator div:hover, .photos .bullet_navigator .av {
       background: url(../img/b03.png) no-repeat;
       overflow: hidden;
@@ -122,34 +139,31 @@
       line-height: 21px;
       color: white;
       font-size: 12px; }
-  .photos .arrowleft, .photos .arrowright {
+  .photos .arrow {
     position: absolute;
     cursor: pointer;
     display: block;
     background: url(../img/a03.png) no-repeat;
-    overflow: hidden; }
-  .photos .arrowleft {
+    overflow: hidden;
+    margin: auto;
     width: 55px;
     height: 55px;
-    bottom: 10px;
-    right: 150px;
-    background-color: green;
-    background-position: -3px -33px; }
-  .photos .arrowright {
-    width: 55px;
-    height: 55px;
-    bottom: 10px;
-    right: 50px;
-    background-color: green;
-    background-position: -63px -33px; }
-  .photos .arrowleft:hover {
-    background-position: -123px -33px; }
-  .photos .arrowright:hover {
-    background-position: -183px -33px; }
-  .photos .arrowleft .dn {
-    background-position: -243px -33px; }
-  .photos .arrowright .dn {
-    background-position: -303px -33px; }
+    bottom: 0;
+    top: 0; }
+    .photos .arrow.left {
+      left: 150px;
+      background-position: -3px -33px; }
+    .photos .arrow.right {
+      right: 150px;
+      background-position: -63px -33px; }
+    .photos .arrow.left:hover {
+      background-position: -123px -33px; }
+    .photos .arrow.right:hover {
+      background-position: -183px -33px; }
+    .photos .arrow.left.dn {
+      background-position: -243px -33px; }
+    .photos .arrow.right.dn {
+      background-position: -303px -33px; }
 
 .content_wrapper {
   background-color: #ffffff;

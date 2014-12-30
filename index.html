@@ -11,7 +11,7 @@
     <script>
         jQuery(document).ready(function ($) {
             var options = {
-                $AutoPlay: true,
+                $AutoPlay: false,
                 $AutoPlayInterval: 4000,
                 $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
                 $BulletNavigatorOptions: {
@@ -77,36 +77,36 @@
                 <!-- Slide -->
                 <div class="slide">
                     <img src="img/landscape/01.jpg" />
-                    Animation plays in "Slides Container"
+                    <div class="slide_caption">A Caption For The Slide</div>
                 </div>
                 <!-- Slide -->
                 <div class="slide">
                     <img src="img/landscape/02.jpg" />
-                    Animation plays in "Slides Container"
+                    <div class="slide_caption">A Different Caption For The Slide"</div>
                 </div>
                 <!-- Slide -->
                 <div class="slide">
                     <img src="img/landscape/03.jpg" />
-                    Animation plays in "Slides Container"
+                    <div class="slide_caption">A Really Lonnnnnnnnnnnnnnng Caption For This Slide</div>
                 </div>
                 <!-- Slide -->
                 <div class="slide">
                     <img src="img/landscape/04.jpg" />
-                    Animation plays in "Slides Container"
+                    <div class="slide_caption">Animation plays in "Slides Container"</div>
                 </div>
             </div>
             
             <!-- bullet navigator container -->
-            <div u="navigator" class="bullet_navigator" title="This is navigator" style="position: absolute; bottom: 4px; left: 6px;">
+            <div u="navigator" class="bullet_navigator" title="This is navigator">
                 <!-- bullet navigator item prototype -->
                 <div u="prototype" class="bullet "><div u="numbertemplate"></div></div>
             </div>
 
             <!-- Arrow Left -->
-            <span u="arrowleft" class="arrowleft " title="This is arrowleft">
+            <span u="arrowleft" class="arrow left " title="This is arrowleft">
             </span>
             <!-- Arrow Right -->
-            <span u="arrowright" class="arrowright " title="This is arrow right">
+            <span u="arrowright" class="arrow right " title="This is arrow right">
             </span>
             
             <a style="display: none" href="http://www.jssor.com">bootstrap slider</a>
